@@ -1,0 +1,35 @@
+/*
+SUBCONSULTA:
+Es una instrucción SELECT anidada en otra instrucción (SELECT, INSERT, UPDATE, DELETE)
+La subconsulta devuelve un único valor, es decir, la información de un solo campo.
+Se debe tener en cuenta el campo común entre las tablas.
+
+Sintaxis:
+SELECT <lista_columnas> FROM <tabla1> WHERE campo_comun_tabla1 IN (SELECT <campo_comun_tabla2> 
+FROM <tabla2> WHERE campo_comun_tabla2 IN (SELECT campo_comun_tablaN> FROM <tablaN> WHERE …))
+
+CONSULTAS INTERNAS (INNER JOIN)
+Permite recuperar registros coincidentes, respecto al campo común, de varias tablas.
+Sintaxis:
+SELECT <lista_columnas> FROM <tabla1> INNER JOIN <tabla2>
+ON <tabla1.campo_comun>=<tabla2.campo_comun> [INNER JOIN <tabla3>
+ON <tabla2.campo_comun>=<tabla3.campo_comun> INNER JOIN <tablaN>
+ON <tabla3.campo_comun>=<tablaN.campo_comun>]
+[WHERE <condición>]
+
+ACTUALIZACIÓN DE LA BASE DE DATOS:
+
+INSERT: Adiciona registro (s) a una tabla
+Sintaxis:
+INSERT INTO <nombre_tabla> [(<lista_campos>)] VALUES (<lista_datos>)
+
+UPDATE: Cambia o modifica el contenido de registros de una tabla.
+Sintaxis:
+UPDATE <nombre_tabla> SET <campo1>=<nuevo_contenido>
+[,<campo2>=<nuevo_contenido>,<campoN>=<nuevo_contenido>]
+[WHERE <condición>]
+
+DELETE: Elimina registro(s) de una tabla.
+Sintaxis:
+DELETE FROM <nombre_tabla> [WHERE <condición>]
+*/
